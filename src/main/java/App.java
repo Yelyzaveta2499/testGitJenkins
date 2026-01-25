@@ -29,6 +29,6 @@ public class App {
 //        if (a == null || b == null) {
 //            throw new IllegalArgumentException("Arguments must not be null");
 //        }
-        return a - b;
+        return a + b;
     }
 }
