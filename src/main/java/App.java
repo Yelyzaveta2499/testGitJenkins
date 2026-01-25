@@ -5,11 +5,11 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter first number (or leave blank): ");
         String firstLine = scanner.nextLine();
-        Integer a = null;
+        Integer a = Integer.parseInt(firstLine);
 
         System.out.print("Enter second number (or leave blank): ");
         String secondLine = scanner.nextLine();
-        Integer b = null;
+        Integer b = Integer.parseInt(secondLine);
 
         try {
             int result = add(a, b);
@@ -29,6 +29,6 @@ public class App {
 //        if (a == null || b == null) {
 //            throw new IllegalArgumentException("Arguments must not be null");
 //        }
-        return a + b;
+        return a - b;
     }
 }
