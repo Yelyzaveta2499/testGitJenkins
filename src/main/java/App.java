@@ -25,10 +25,10 @@ public class App {
     }
 
     // Add: simple method to calculate sum of two integers
-    public static int add(Integer a, int b) {
-//        if (a == null || b == null) {
-//            throw new IllegalArgumentException("Arguments must not be null");
-//        }
+    public static int add(Integer a, Integer b) {
+        if (a == null || b == null) {
+            throw new IllegalArgumentException("Arguments must not be null");
+        }
 
         return a + b;
     }

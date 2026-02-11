@@ -1,22 +1,26 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class AppTest {
+class AppTest {
 
     @Test
-    void addTwoPositive() {
+    void testAddValid() {
         assertEquals(5, App.add(2, 3));
     }
 
     @Test
-    void addWithNegative() {
-        assertEquals(0, App.add(2, -2));
+    void testAddNullFirstThrows() {
+        assertThrows(IllegalArgumentException.class, () -> App.add(null, 1));
     }
 
     @Test
-    void addZero() {
-        assertEquals(7, App.add(7, 0));
+    void testAddNullSecondThrows() {
+        assertThrows(IllegalArgumentException.class, () -> App.add(1, null));
+    }
+
+    @Test
+    void testAddBothNullThrows() {
+        assertThrows(IllegalArgumentException.class, () -> App.add(null, null));
     }
 }
-
